@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { TopMenuComponent } from './header/top-menu/top-menu.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { TopMenuComponent } from './header/top-menu/top-menu.component';
     HeaderComponent,
     TopHeaderComponent,
     TopMenuComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule
