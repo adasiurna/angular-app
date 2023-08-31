@@ -1,0 +1,7 @@
+<div class="search--product">
+  <!-- <input class="search-product-input" [value]="searchText" (input)="updateSearchText($event)"> property binding & event binding -->
+  <!-- <input class="search-product-input" [(ngModel)]="searchText"> two way data binding -->
+  <input class="search-product-input" [(ngModel)]="searchText">
+  <button class="btn btn-search">Search</button>
+</div>
+<div class="search-result-for"><p><strong>Search result for:</strong> {{ searchText }}</p></div>
