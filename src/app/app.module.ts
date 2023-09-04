@@ -9,6 +9,7 @@ import { ProductContainerComponent } from './product-container/product-container
 import { SearchComponent } from './product-container/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './product-container/product-list/product-list.component';
+import { ProductComponent } from './product-container/product-list/product/product.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProductListComponent } from './product-container/product-list/product-l
     ProductContainerComponent,
     SearchComponent,
     ProductListComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
