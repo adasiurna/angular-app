@@ -16,12 +16,12 @@
 .btn{
   padding: 5px 10px;
   border: none;
-  cursor: pointer;
 }
 .btn-search {
   padding: 12px 30px;
   background-color: #28282B;
   color:#fff;
+  cursor: pointer;
 }
 
 .btn-search:hover {
@@ -31,4 +31,13 @@
 .search-result-for{
   margin: 20px auto;
   padding: 10px 140px;
+}
+
+.btn-search-disabled {
+  padding: 12px 30px;
+  background-color: #aaa;
+  margin-left: -1px;
+  color: #999;
+  border: #aaa 1px solid;
+  cursor: not-allowed;
 }

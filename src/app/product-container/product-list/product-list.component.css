@@ -65,6 +65,7 @@
   margin-top: 7px;
 }
 .product--category,
+.product--in--stock,
 .product--available-colors{
   font-size: 12px;
   color: #999;
