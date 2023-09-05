@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-container',
@@ -6,10 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-container.component.css']
 })
 export class ProductContainerComponent {
-  listOfString :string[] = ["Mary", "Bob", "Linda", "John"]
+  
+  searchText: string = '';
 
   // onNameChange(event: Event) {
   //   const { value } = (event.target as HTMLSelectElement);
   //   this.name = value;
   // }
+
+  setSearchText(value: string) {
+    this.searchText = value;
+    console.log('setSearchText in container, value:', value);
+  }
 }

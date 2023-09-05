@@ -7,9 +7,12 @@
 <div class="products--container">
   <div *ngFor="let prod of products" >
     <app-product [product]="prod"
+      *ngIf="searchText === '' || prod.name.toLowerCase().includes(searchText.toLowerCase())"
+    ></app-product>
+    <!-- <app-product [product]="prod"
       *ngIf="selectedFilterRadioBtn === 'all' ||  
              selectedFilterRadioBtn==='instock' && prod.is_in_inventory  || 
              selectedFilterRadioBtn==='outofstock' && !prod.is_in_inventory "
-    ></app-product>
+    ></app-product> -->
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-list',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = [
+  unfilteredProducts = [
     {
       id: 1,
       name: "Nike React Infinity Run Flyknit",
@@ -517,6 +517,15 @@ export class ProductListComponent {
       slug: "michael-feburary-sk8-hi"
     }
   ];
+
+  
+  @Input()
+  searchText: string = '';
+
+  products = this.unfilteredProducts.filter(p => {
+    console.log('filtering products');
+    return p.name.includes(this.searchText)
+  });
 
   totalProductCount = this.products.length;
   inStockCount = this.products.filter(p => p.is_in_inventory === true).length;
