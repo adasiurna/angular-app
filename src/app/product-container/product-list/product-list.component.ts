@@ -517,4 +517,14 @@ export class ProductListComponent {
       slug: "michael-feburary-sk8-hi"
     }
   ];
+
+  totalProductCount = this.products.length;
+  inStockCount = this.products.filter(p => p.is_in_inventory === true).length;
+  outOfStockCount = this.products.filter(p => p.is_in_inventory === false).length;
+
+  selectedFilterRadioBtn: string = 'all';
+
+  onFilterChange(emittedValue: string) {
+    this.selectedFilterRadioBtn = emittedValue;
+  }
 }
